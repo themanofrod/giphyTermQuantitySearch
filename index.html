@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movies</title>
+</head>
+<body>
+	<main class="main-content">
+		<h1>Giphy Search by Term &amp; Quantity</h1>
+		<form class="search-form" onsubmit="getImages(); return false">
+			<label for="search-term">Search Term</label>
+			<input type="text" 
+				   name="search-term" 
+				   id="search-term" 
+				   value="Gundam" 
+				   minlength="1"
+				   required>
+			<label for="search-number">Number of Giphy(s)</label>
+			<input type="number" 
+				   name="search-number" 
+				   min="1" 
+				   max="50" 
+				   id="search-number" 
+				   value="5" 
+				   required>
+			<input type="submit" 
+				   name="search-button" 
+				   id="search-button"
+				   value="Search">
+		</form>
+		<div class="results-container">
+			<div class="images-container"></div>
+			<button id="button-left" type="button"><i class="fas fa-caret-left fa-5x"></i></button>
+			<button id="button-right" type="button"><i class="fas fa-caret-right fa-5x"></i></button>
+		</div>
+	</main>
+	<footer class="footer">
+		themanoforod
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>

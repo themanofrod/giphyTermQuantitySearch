@@ -1,0 +1,152 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #444;
+	color: #eee;
+	font-family: sans-serif;
+}
+
+h1 {
+	margin: 1rem;
+}
+
+.main-content {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.search-form {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+}
+
+.search-form input {
+	border: transparent;
+	padding: .5rem 2rem;
+	font-size: 1rem;
+	margin-bottom: .5rem;
+	border-radius: 2rem;
+	text-align: center;
+}
+
+.search-form input:first-of-type {
+	width: 20rem;
+}
+
+.search-form input:nth-of-type(2) {
+	width: 4rem;
+	padding: .5rem 1rem;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.results-container {
+	position: relative;
+	height: 70vh;
+	margin-bottom: 10vh;
+}
+
+.images-container {
+	overflow-x: visible;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.images {
+	display: inline-block;
+	height: 70vh;
+	margin-right: 2rem;
+}
+
+.images:first-of-type {
+	margin-left: 4.5rem;
+}
+
+.images:last-of-type {
+	margin-right: 4.5rem;
+}
+
+#button-left, #button-right {
+	visibility: hidden;
+	position: absolute;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	z-index: 2;
+	background-color: rgba(200,200,200,.5);
+}
+
+#button-left {
+	top: 0;
+	left: 0;
+	padding-left: .5rem;
+	padding-right: 1rem;
+}
+
+#button-right {
+	top: 0;
+	right: 0;
+	padding-left: 1rem;
+	padding-right: .5rem;
+}
+
+#button-left:hover , #button-right:hover {
+	background-color: rgba(200,200,200,.8);
+}
+
+.active #button-left, .active #button-right {
+	visibility: visible;
+}
+
+.footer {
+	text-align: center;
+	color: #999;
+	margin: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+	.images-container {
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+
+	.images {
+		display: block;
+		height: auto;
+		width: 100vw;
+		margin: 1rem auto;
+	}
+
+	.images:first-of-type {
+		margin-left: auto;
+	}
+
+	.images:last-of-type {
+		margin-right: auto;
+	}
+
+	.active #button-left, .active #button-right {
+	visibility: hidden;
+}
+}
+
+
+
+
+
